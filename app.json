@@ -1,9 +1,9 @@
 {
-    "name": "Visha-Bot",
+    "name": "HINATA-X-BOT",
     "description": "The Telegram Autofilter Bot",
     "logo": "https://telegra.ph/file/31ea52b5d88a81b587517.jpg",
     "keywords": ["Telegram", "auto-filter"],
-    "repository": "https://github.com/OMlinks/VishaBot-hinata",
+    "repository": "https://github.com/OMlinks/HINATA-X-BOT",
     "env": {
         "WEBHOOK": {
             "description": "True/False if your server is web support required? the value is True else False",
