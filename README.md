@@ -1,1 +1,1 @@
-# HINATA-BO
+# HINATA-BOT
