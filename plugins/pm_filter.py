@@ -38,7 +38,7 @@ async def pm_next_page(bot, query):
     if not files: return
     
               btn = [[InlineKeyboardButton(text=f"{file.file_name}", url=await get_shortlink(f"https://telegram.dog/{temp.U_NAME}?start=files_{file.file_id}")),
-(text=f"{get_size(file.file_size)}", url=await get_shortlink(f"https://telegram.dog/{temp.U_NAME}?start=files_{file.file_id}"))
+(text=f"{get_size(file.file_size)}", url=await get_shortlink(f"https://telegram.dog/{temp.U_NAME}?start=files_{file.file_id}"))]
 
     btn.insert(0, [InlineKeyboardButton("🔆 OM_links 🔆", "howdl")])
     if 0 < offset <= 10: off_set = 0
@@ -104,7 +104,7 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
     if SHORT_URL and SHORT_API:          
         if SINGLE_BUTTON:
                 btn = [[InlineKeyboardButton(text=f"{file.file_name}", url=await get_shortlink(f"https://telegram.dog/{temp.U_NAME}?start=files_{file.file_id}")),
-(text=f"{get_size(file.file_size)}", url=await get_shortlink(f"https://telegram.dog/{temp.U_NAME}?start=files_{file.file_id}"))
+(text=f"{get_size(file.file_size)}", url=await get_shortlink(f"https://telegram.dog/{temp.U_NAME}?start=files_{file.file_id}"))]
 
 
     btn.insert(0, [InlineKeyboardButton("🔆 OM_links 🔆", "howdl")])
