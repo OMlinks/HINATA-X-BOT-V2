@@ -429,64 +429,63 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "start":                        
         buttons = [[
-        
-            InlineKeyboardButton("🔍 Sᴇᴀʀᴄʜ 🔎", switch_inline_query_current_chat='')
-            ],[
-            InlineKeyboardButton("🎭 Gʀᴏᴜᴩ 🎭", url="https://t.me/+KRA74ZE4GZ84N2Q1")
-            ],[      
-            InlineKeyboardButton("🔱 HΞLᎮ 🔱", callback_data="help"),
-            InlineKeyboardButton("🔆 ΛBOUT 🔆", callback_data="about")
-            ],[
             InlineKeyboardButton("⚚ + ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ + ⚚", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
+            ],[     
+            InlineKeyboardButton("ʜᴇʟᴩ", callback_data="help"),
+            InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="about")
+            ],[
+            InlineKeyboardButton("🔍 ꜱᴇᴀʀᴄʜ 🔎", switch_inline_query_current_chat='')
+            ],[
+            InlineKeyboardButton("🎭 ɢʀᴏᴜᴩ 🎭", url="https://t.me/+KRA74ZE4GZ84N2Q1")
         ]]
         await query.edit_message_media(InputMediaPhoto(random.choice(PICS), START_MESSAGE.format(user=query.from_user.mention, bot=client.mention), enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
        
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('⚙️ Aᴅᴍɪɴ Pᴀɴᴇʟ ⚙️', 'admin')            
+            InlineKeyboardButton('⚙️ ᴀᴅᴍɪɴ ᴩᴀɴᴇʟ ', 'admin')            
             ],[
-            InlineKeyboardButton('Fɪʟᴛᴇʀꜱ', 'openfilter'),
-            InlineKeyboardButton('Cᴏɴɴᴇᴄᴛ', 'coct')
+            InlineKeyboardButton('ꜰɪʟᴛᴇʀꜱ', 'openfilter'),
+            InlineKeyboardButton('ᴄᴏɴɴᴇᴄᴛ', 'coct')
             ],[                       
-            InlineKeyboardButton('Fɪʟᴇ Sᴛᴏʀᴇ', 'newdata'),
-            InlineKeyboardButton('Exᴛʀᴀ Mᴏᴅᴇ', 'extmod')
+            InlineKeyboardButton('ꜰɪʟᴇ ꜱᴛᴏʀᴇ', 'newdata'),
+            InlineKeyboardButton('ᴇxᴛʀᴀ ᴍᴏᴅᴇ', 'extmod')
             ],[           
-            InlineKeyboardButton('Gʀᴏᴜᴩ Mᴀɴᴀɢᴇʀ', 'gpmanager'), 
-            InlineKeyboardButton('Bᴏᴛ Sᴛᴀᴛᴜꜱ ❄️', 'stats')
+            InlineKeyboardButton('ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇʀ', 'gpmanager'), 
+            InlineKeyboardButton('ʙᴏᴛ ꜱᴛᴀᴛᴜꜱ ', 'stats')
             ],[
-            InlineKeyboardButton("🔆 ΛBOUT 🔆", callback_data="about")
+            InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="about")
             ],[
-            InlineKeyboardButton('« Bᴀᴄᴋ', 'start'),
-            InlineKeyboardButton('✘ Cʟᴏꜱᴇ', 'close_data')           
+            InlineKeyboardButton('« ʙᴀᴄᴋ', 'start'),
+            InlineKeyboardButton('ᴄʟᴏꜱᴇ', 'close_data')           
         ]]
         await query.edit_message_media(InputMediaPhoto(random.choice(PICS), script.HELP_TXT.format(query.from_user.mention), enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))     
         
     elif query.data == "about":
         buttons= [[
-            InlineKeyboardButton('Sᴏᴜʀᴄᴇ Cᴏᴅᴇ ❌', 'source')
+            InlineKeyboardButton('ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ❌', 'source')
             ],[
-            InlineKeyboardButton("🎭 Cʜᴀɴɴᴇʟ 🎭", url="https://t.me/OM_links")
+            InlineKeyboardButton("🎭 ᴄʜᴀɴɴᴇʟ 🎭", url="https://t.me/OM_links")
             ],[
-            InlineKeyboardButton("🔱 HΞLᎮ 🔱", callback_data="help")
+            InlineKeyboardButton("ʜᴇʟᴩ", callback_data="help")
             ],[
-            InlineKeyboardButton('« Bᴀᴄᴋ', 'start'),
-            InlineKeyboardButton('✘ Cʟᴏꜱᴇ', 'close_data')          
+            InlineKeyboardButton('ʙᴀᴄᴋ', 'start'),
+            InlineKeyboardButton('ᴄʟᴏꜱᴇ', 'close_data')          
         ]]
         await query.edit_message_media(InputMediaPhoto(random.choice(PICS), script.ABOUT_TXT.format(temp.B_NAME), enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
         
     elif query.data == "source":
         buttons = [[
             InlineKeyboardButton('ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ', url='https://t.me/OM_TG_V'),
-            InlineKeyboardButton('Bᴏᴛ Sᴛᴀᴛᴜꜱ ❄️', 'stats')
+            InlineKeyboardButton('ʙᴏᴛ ꜱᴛᴀᴛᴜꜱ ', 'stats')
             ],[
-            InlineKeyboardButton('‹ Bᴀᴄᴋ', 'about')
+            InlineKeyboardButton('ʙᴀᴄᴋ', 'about')
         ]]
         await query.edit_message_media(InputMediaPhoto(random.choice(PICS), script.SOURCE_TXT, enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
       
     elif query.data == "admin":
         buttons = [[
-            InlineKeyboardButton('« Bᴀᴄᴋ', 'help'),
-            InlineKeyboardButton('✘ Cʟᴏꜱᴇ', 'close_data')           
+            InlineKeyboardButton('ʙᴀᴄᴋ', 'help'),
+            InlineKeyboardButton('ᴄʟᴏꜱᴇ', 'close_data')           
         ]]
         if query.from_user.id not in ADMINS:
             return await query.answer("Sᴏʀʀʏ Tʜɪs Mᴇɴᴜ Oɴʟʏ Fᴏʀ Mʏ Aᴅᴍɪɴs ⚒️", show_alert=True)
@@ -498,29 +497,29 @@ async def cb_handler(client: Client, query: CallbackQuery):
         
     elif query.data == "openfilter":
         buttons = [[
-            InlineKeyboardButton('AᴜᴛᴏFɪʟᴛᴇʀ', 'autofilter'),
-            InlineKeyboardButton('MᴀɴᴜᴀʟFɪʟᴛᴇʀ', 'manuelfilter')
+            InlineKeyboardButton('ᴀᴜᴛᴏꜰɪʟᴛᴇʀ', 'autofilter'),
+            InlineKeyboardButton('ᴍᴀɴᴜᴀʟꜰɪʟᴛᴇʀ', 'manuelfilter')
             ],[
-            InlineKeyboardButton('GʟᴏʙᴀʟFɪʟᴛᴇʀ', 'globalfilter')
+            InlineKeyboardButton('ɢʟᴏʙᴀʟꜰɪʟᴛᴇʀ', 'globalfilter')
             ],[
-            InlineKeyboardButton('« Bᴀᴄᴋ', 'help'),
-            InlineKeyboardButton('✘ Cʟᴏꜱᴇ', 'close_data')           
+            InlineKeyboardButton('ʙᴀᴄᴋ', 'help'),
+            InlineKeyboardButton('ᴄʟᴏꜱᴇ', 'close_data')           
         ]]
         await query.edit_message_media(InputMediaPhoto(random.choice(PICS), script.FILTER_TXT, enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
         
     elif query.data == "autofilter":
         buttons = [[
-            InlineKeyboardButton('« Bᴀᴄᴋ', 'openfilter'),
-            InlineKeyboardButton('✘ Cʟᴏꜱᴇ', 'close_data')           
+            InlineKeyboardButton('ʙᴀᴄᴋ', 'openfilter'),
+            InlineKeyboardButton('ᴄʟᴏꜱᴇ', 'close_data')           
         ]]
         await query.edit_message_media(InputMediaPhoto(random.choice(PICS), script.AUTOFILTER_TXT, enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
         
     elif query.data == "manuelfilter":
         buttons = [[
-            InlineKeyboardButton('Bᴜᴛᴛᴏɴ Fᴏʀᴍᴀᴛ', 'button')
+            InlineKeyboardButton('ʙᴜᴛᴛᴏɴ ꜰᴏʀᴍᴀᴛ', 'button')
             ],[
-            InlineKeyboardButton('« Bᴀᴄᴋ', 'openfilter'),
-            InlineKeyboardButton('✘ Cʟᴏꜱᴇ', 'close_data')          
+            InlineKeyboardButton('ʙᴀᴄᴋ', 'openfilter'),
+            InlineKeyboardButton('ᴄʟᴏꜱᴇ', 'close_data')          
         ]]
         await query.edit_message_media(InputMediaPhoto(random.choice(PICS), script.MANUELFILTER_TXT, enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
         
