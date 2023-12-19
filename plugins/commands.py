@@ -33,15 +33,14 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention, message.from_user.username, temp.U_NAME))
     if len(message.command) != 2:
         buttons = [[
-        
-            InlineKeyboardButton("🔍 Sᴇᴀʀᴄʜ 🔎", switch_inline_query_current_chat='')
-            ],[
-            InlineKeyboardButton("🎭 Gʀᴏᴜᴩ 🎭", url="https://t.me/+KRA74ZE4GZ84N2Q1")
-            ],[      
-            InlineKeyboardButton("🔱 HΞLᎮ 🔱", callback_data="help"),
-            InlineKeyboardButton("🔆 ΛBOUT 🔆", callback_data="about")
-            ],[
             InlineKeyboardButton("⚚ + ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ + ⚚", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
+            ],[     
+            InlineKeyboardButton("ʜᴇʟᴩ", callback_data="help"),
+            InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="about")
+            ],[
+            InlineKeyboardButton("🔍 ꜱᴇᴀʀᴄʜ 🔎", switch_inline_query_current_chat='')
+            ],[
+            InlineKeyboardButton("🎭 ɢʀᴏᴜᴩ 🎭", url="https://t.me/+KRA74ZE4GZ84N2Q1")
         ]]
         m = await message.reply_sticker("CAACAgUAAxkBAAJiVGVi67X3-k_Jmpl_Vn8LAsCEee49AALwBAAC0zvRV6GPpPtRmRhrMwQ") 
         await asyncio.sleep(3)
@@ -71,15 +70,14 @@ async def start(client, message):
         
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-        
-            InlineKeyboardButton("🔍 Sᴇᴀʀᴄʜ 🔎", switch_inline_query_current_chat='')
-            ],[
-            InlineKeyboardButton("🎭 Gʀᴏᴜᴩ 🎭", url="https://t.me/+KRA74ZE4GZ84N2Q1")
-            ],[      
-            InlineKeyboardButton("🔱 HΞLᎮ 🔱", callback_data="help"),
-            InlineKeyboardButton("🔆 ΛBOUT 🔆", callback_data="about")
-            ],[
             InlineKeyboardButton("⚚ + ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ + ⚚", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
+            ],[     
+            InlineKeyboardButton("ʜᴇʟᴩ", callback_data="help"),
+            InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="about")
+            ],[
+            InlineKeyboardButton("🔍 ꜱᴇᴀʀᴄʜ 🔎", switch_inline_query_current_chat='')
+            ],[
+            InlineKeyboardButton("🎭 ɢʀᴏᴜᴩ 🎭", url="https://t.me/+KRA74ZE4GZ84N2Q1")
         ]]
         m = await message.reply_sticker("CAACAgUAAxkBAAJiVGVi67X3-k_Jmpl_Vn8LAsCEee49AALwBAAC0zvRV6GPpPtRmRhrMwQ")
         await asyncio.sleep(2)
