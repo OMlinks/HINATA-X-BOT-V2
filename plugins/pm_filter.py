@@ -37,14 +37,8 @@ async def pm_next_page(bot, query):
     except: n_offset = 0
     if not files: return
     
-    if SHORT_URL and SHORT_API:          
-        if SINGLE_BUTTON:
-            InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
-                ),
-            ]
-            for file in files
-            ]
+              btn = [[InlineKeyboardButton(text=f"{file.file_name}", url=await get_shortlink(f"https://telegram.dog/{temp.U_NAME}?start=files_{file.file_id}")),
+(text=f"{get_size(file.file_size)}", url=await get_shortlink(f"https://telegram.dog/{temp.U_NAME}?start=files_{file.file_id}"))
 
     btn.insert(0, [InlineKeyboardButton("🔆 OM_links 🔆", "howdl")])
     if 0 < offset <= 10: off_set = 0
