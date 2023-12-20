@@ -211,8 +211,6 @@ async def pm_spoll_choker(msg):
     if not g_s:
         k = await msg.reply_sticker("CAACAgIAAxkBAAJpU2WCUtjqeUaAPbmzub_G6YmB4AABHwACuAADwZxgDBuRSWGcQFhEMwQ") 
         await asyncio.sleep(2)
-        return await k.delete()
-
         k = await msg.reply("I Cᴏᴜʟᴅɴ'ᴛ Fɪɴᴅ Aɴʏ Mᴏᴠɪᴇ Iɴ Tʜᴀᴛ Nᴀᴍᴇ", quote=True)
         await asyncio.sleep(10)
         return await k.delete()
