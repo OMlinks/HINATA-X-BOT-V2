@@ -209,7 +209,7 @@ async def pm_spoll_choker(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await m.reply_sticker("CAACAgIAAxkBAAJpU2WCUtjqeUaAPbmzub_G6YmB4AABHwACuAADwZxgDBuRSWGcQFhEMwQ") 
+        k = await msg.reply_sticker("CAACAgIAAxkBAAJpU2WCUtjqeUaAPbmzub_G6YmB4AABHwACuAADwZxgDBuRSWGcQFhEMwQ") 
         await asyncio.sleep(2)
         return await k.delete()
 
