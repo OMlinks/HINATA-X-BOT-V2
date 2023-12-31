@@ -461,8 +461,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         
     elif query.data == "about":
         buttons= [[
-            InlineKeyboardButton('ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ❌', 'source')
-            ],[
+            InlineKeyboardButton('ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ❌', 'source'),
             InlineKeyboardButton("🎭 ᴄʜᴀɴɴᴇʟ 🎭", url="https://t.me/OM_links")
             ],[
             InlineKeyboardButton("ʜᴇʟᴩ", callback_data="help")
@@ -500,8 +499,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
             InlineKeyboardButton('ɢʟᴏʙᴀʟꜰɪʟᴛᴇʀ', 'globalfilter')
             ],[
-            InlineKeyboardButton('ʙᴀᴄᴋ', 'help'),
-            InlineKeyboardButton('ᴄʟᴏꜱᴇ', 'close_data')           
+            InlineKeyboardButton('ʙᴀᴄᴋ', 'help')           
         ]]
         await query.edit_message_media(InputMediaPhoto(random.choice(PICS), script.FILTER_TXT, enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
         
