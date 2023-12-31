@@ -442,7 +442,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
        
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('⚙️ ᴀᴅᴍɪɴ ᴩᴀɴᴇʟ ', 'admin')            
+            InlineKeyboardButton(' ᴀᴅᴍɪɴ ᴩᴀɴᴇʟ ', 'admin')            
             ],[
             InlineKeyboardButton('ꜰɪʟᴛᴇʀꜱ', 'openfilter'),
             InlineKeyboardButton('ᴄᴏɴɴᴇᴄᴛ', 'coct')
@@ -455,8 +455,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
             InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="about")
             ],[
-            InlineKeyboardButton('« ʙᴀᴄᴋ', 'start'),
-            InlineKeyboardButton('ᴄʟᴏꜱᴇ', 'close_data')           
+            InlineKeyboardButton('ʜᴏᴍᴇ', 'start')           
         ]]
         await query.edit_message_media(InputMediaPhoto(random.choice(PICS), script.HELP_TXT.format(query.from_user.mention), enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))     
         
@@ -468,14 +467,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
             InlineKeyboardButton("ʜᴇʟᴩ", callback_data="help")
             ],[
-            InlineKeyboardButton('ʙᴀᴄᴋ', 'start'),
-            InlineKeyboardButton('ᴄʟᴏꜱᴇ', 'close_data')          
+            InlineKeyboardButton('ʜᴏᴍᴇ', 'start')          
         ]]
         await query.edit_message_media(InputMediaPhoto(random.choice(PICS), script.ABOUT_TXT.format(temp.B_NAME), enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
         
     elif query.data == "source":
         buttons = [[
-            InlineKeyboardButton('ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ', url='https://t.me/OM_TG_V'),
+            InlineKeyboardButton('ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ', url='https://github.com/OMlinks/HINATA-X-BOT'),
             InlineKeyboardButton('ʙᴏᴛ ꜱᴛᴀᴛᴜꜱ ', 'stats')
             ],[
             InlineKeyboardButton('ʙᴀᴄᴋ', 'about')
