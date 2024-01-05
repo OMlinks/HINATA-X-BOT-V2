@@ -3,7 +3,7 @@
 
 ## Deploy to Heroku                     
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/OMlinks/HINATA-X-BOT)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/OMlinks/HINATA-X-BOT-V2)
 ```
 start - check bot alive
 settings - get settings 
